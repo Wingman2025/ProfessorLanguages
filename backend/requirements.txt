@@ -1,8 +1,9 @@
-fastapi
+fastapi==0.95.0
 uvicorn[standard]
 jinja2
 sqlalchemy
 psycopg2-binary
 alembic
 python-dotenv
-openai
+openai-agents==0.0.13
+openai==1.70.0

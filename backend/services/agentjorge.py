@@ -1,10 +1,6 @@
 import os
-from openai import Agent, Runner, AsyncOpenAI
+from agents import Agent, Runner
 import asyncio   
-
-client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-# No usamos function_tool aquí
 
 # Agentes especializados directamente
 
@@ -29,10 +25,11 @@ scenariogeneratoragent = Agent(
 # Runner para ejecutar agentes
 
 async def run_agent(agent: Agent, user_input: str) -> str:
-    runner = Runner(agent=agent, client=client)
     try:
-        result = await runner.run(user_input)
-        return result.output
+        # Ejecuta el agente usando Runner.run estático
+        result = await Runner.run(agent, user_input)
+        # Usa final_output si está presente, si no recurre a output
+        return getattr(result, 'final_output', None) or getattr(result, 'output', '')
     except Exception as e:
         print("Error running agent:", e)
         return f"Error: {e}"
@@ -51,10 +48,8 @@ async def main():
     else:
         output = "Acción no reconocida."
 
-    print("\nResultado generado:\n", output)
-
-    topic = await run_agent(oneminuteagent, "Generate a topic for the One-Minute Challenge")
-    print("Generated topic:", topic)
+    # Mostrar solo el resultado del agente
+    print(output)
 
 # Ejecutar
 if __name__ == "__main__":
