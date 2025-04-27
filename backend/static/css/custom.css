@@ -52,7 +52,9 @@ body {
     padding-bottom: 1rem !important;
   }
   .challenge-page {
-    margin-top: -60px !important;
+    margin-top: 0 !important;
+    min-height: calc(100vh - 180px) !important;
+    justify-content: center !important;
   }
   .lead.mb-4 {
     margin-bottom: 1rem !important;
