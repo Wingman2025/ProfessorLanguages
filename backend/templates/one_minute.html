@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>One-Minute Challenge</h1>
-<div class="mb-3">
-  <button id="gen-topic" class="btn btn-secondary">Generate Topic</button>
-  <span id="topic" class="ms-3"></span>
-</div>
-<div class="mb-3">
-  <button id="start" class="btn btn-primary">Start 60s</button>
-  <span id="timer" class="ms-3">60</span>
-</div>
-<form id="notes-form" class="mt-3 d-none">
+<div class="challenge-page text-center">
+  <h1>One-Minute Challenge</h1>
   <div class="mb-3">
-    <label for="notes" class="form-label">Key Phrases (2-3):</label>
-    <textarea id="notes" class="form-control" rows="3"></textarea>
+    <button id="gen-topic" class="btn btn-secondary">Generate Topic</button>
+    <span id="topic" class="ms-3"></span>
   </div>
-</form>
-<script defer src="/static/js/one_minute.js"></script>
+  <div class="mb-3">
+    <button id="start" class="btn btn-primary">Start 60s</button>
+    <span id="timer" class="ms-3">60</span>
+  </div>
+  <form id="notes-form" class="mt-3 d-none">
+    <div class="mb-3">
+      <label for="notes" class="form-label">Key Phrases (2-3):</label>
+      <textarea id="notes" class="form-control" rows="3"></textarea>
+    </div>
+  </form>
+  <script defer src="/static/js/one_minute.js"></script>
+</div>
 {% endblock %}
