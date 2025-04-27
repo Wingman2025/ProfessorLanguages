@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spanish Teaching App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/cerulean/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="/static/css/style.css" rel="stylesheet">
+  <link href="/static/css/custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .hero {
+      background-image: url('https://source.unsplash.com/1600x900/?beach');
+      background-size: cover;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero text-center text-white">
+    <h1>Learn Spanish by the Beach <i class="fas fa-umbrella-beach"></i></h1>
+  </header>
+  <div class="container py-4">
+    <nav class="navbar mb-4">
+      <a class="nav-link text-white" href="/one_minute"><i class="fas fa-stopwatch"></i> One-Minute Challenge</a>
+      <a class="nav-link text-white" href="/hot_potato"><i class="fas fa-hotdog"></i> Word Hot Potato</a>
+      <a class="nav-link text-white" href="/role_play"><i class="fas fa-theater-masks"></i> Role-Play</a>
+    </nav>
+    {% block content %}{% endblock %}
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

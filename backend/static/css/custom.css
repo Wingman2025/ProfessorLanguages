@@ -1,0 +1,32 @@
+:root {
+  --beach-sky: #A8E6CF;
+  --beach-sand: #FFE3A3;
+  --beach-sea: #61C0BF;
+  --beach-sun: #F7B32B;
+}
+
+body {
+  background: linear-gradient(135deg, var(--beach-sky), var(--beach-sand));
+}
+
+.btn-primary {
+  background-color: var(--beach-sea) !important;
+  border-color: var(--beach-sea) !important;
+}
+
+.btn-secondary {
+  background-color: var(--beach-sand) !important;
+  border-color: var(--beach-sand) !important;
+  color: #05386B !important;
+}
+
+.hero {
+  background-image: url('https://source.unsplash.com/1600x900/?beach,sun,sea') !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  color: #FFF !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}

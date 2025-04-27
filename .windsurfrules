@@ -1,0 +1,7 @@
+Create agents that use only the new API responses from OpenAI with openai-agents version 0.0.13 and never user chatcompletion 
+Prepare the project to deploy in railway
+Prepare the project to Use the DB postgresql
+Prepare the migration with a toml file and a start command
+Create a gitignore with files that are not needed in the repository
+Create a README.md with details instructions on what is this project about and how to run it
+
