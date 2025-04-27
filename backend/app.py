@@ -12,3 +12,15 @@ templates = Jinja2Templates(directory="backend/templates")
 @app.get("/")
 async def home(request: Request):
     return templates.TemplateResponse("base.html", {"request": request})
+
+@app.get("/one_minute")
+async def one_minute(request: Request):
+    return templates.TemplateResponse("one_minute.html", {"request": request})
+
+@app.get("/hot_potato")
+async def hot_potato(request: Request):
+    return templates.TemplateResponse("hot_potato.html", {"request": request})
+
+@app.get("/role_play")
+async def role_play(request: Request):
+    return templates.TemplateResponse("role_play.html", {"request": request})
