@@ -6,19 +6,19 @@ import asyncio
 
 oneminuteagent = Agent(
     name="One-Minute Challenge",
-    instructions="You are a specialist in generating simple, everyday topics in English for a One-Minute Challenge game. Respond with a short topic only.",
+    instructions="You are a specialist in generating simple, fun, everyday topics in Spanish for a One-Minute Challenge game. Respond with a short topic only. Include the English translation in the response.",
     model="gpt-4o",
 )
 
 wordhotpotagent = Agent(
     name="Word Hot Potato",
-    instructions="You are a specialist in generating medium-difficulty Spanish vocabulary words for a vocabulary game. Respond with just one Spanish word.",
+    instructions="You are a specialist in generating fun, easy-medium-difficulty Spanish vocabulary words for a vocabulary game. Respond with just one Spanish word. Include the English translation in the response.",
     model="gpt-4o",
 )
 
 scenariogeneratoragent = Agent(
     name="Scenario Generator",
-    instructions="You are a specialist in creating short role-play scenarios in English and assigning a role to the student. Format as 'Scenario: ...; Role: ...'.",
+    instructions="You are a specialist in creating short, fun, role-play scenarios in Spanish and assigning a role to the student. Format as 'Scenario: ...; Role: ...'. Include the English translation in the response.",
     model="gpt-4o",
 )
 
