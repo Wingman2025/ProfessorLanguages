@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from backend.services.agentjorge import oneminuteagent, wordhotpotagent, scenariogeneratoragent, run_agent
 
 app = FastAPI()
 
@@ -24,3 +25,18 @@ async def hot_potato(request: Request):
 @app.get("/role_play")
 async def role_play(request: Request):
     return templates.TemplateResponse("role_play.html", {"request": request})
+
+@app.get("/api/one_minute")
+async def api_one_minute():
+    result = await run_agent(oneminuteagent, "Generate a topic, please.")
+    return {"result": result}
+
+@app.get("/api/hot_potato")
+async def api_hot_potato():
+    result = await run_agent(wordhotpotagent, "Generate a word, please.")
+    return {"result": result}
+
+@app.get("/api/role_play")
+async def api_role_play():
+    result = await run_agent(scenariogeneratoragent, "Generate a scenario, please.")
+    return {"result": result}
