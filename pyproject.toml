@@ -1,0 +1,3 @@
+[tool.alembic]
+script_location = "backend/alembic"
+sqlalchemy_url = "${DATABASE_URL}"
